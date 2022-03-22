@@ -8,7 +8,7 @@ an alfred workflow to search gitlab projects
 2. Edit the workflow and make sure the following variables are set:
 
 * `GITLAB_URL` (ex: `https://gitlab.<your-domain>.com`)
-* `GITLAB_TOKEN`: Your confluence access token.  You can generate an access token in your Gitlab Profile.
+* `GITLAB_TOKEN`: Your gitlab access token.  You can generate an access token in your Gitlab Profile.
 
 3. Search for gitlab with `gitlab <search>`
 
