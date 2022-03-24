@@ -121,9 +121,9 @@
 	<key>variables</key>
 	<dict>
 		<key>GITLAB_TOKEN</key>
-		<string>qXndZiucUJ6_c_WpHJgy</string>
+		<string></string>
 		<key>GITLAB_URL</key>
-		<string>https://gitlab.rechargeapps.net</string>
+		<string></string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
@@ -131,7 +131,7 @@
 		<string>GITLAB_URL</string>
 	</array>
 	<key>version</key>
-	<string>0.0.1</string>
+	<string>1.0.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/mjhuber/alfred-gitlab</string>
 </dict>
