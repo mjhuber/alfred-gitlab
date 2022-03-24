@@ -1,8 +1,10 @@
 package main
 
 import (
+	"log"
 	"os"
 	"strings"
+	"time"
 
 	aw "github.com/deanishe/awgo"
 	"github.com/deanishe/awgo/update"
@@ -11,9 +13,10 @@ import (
 var (
 	// icons
 	updateAvailable = &aw.Icon{Value: "icons/update-available.png"}
-
-	repo  = "mjhuber/alfred-gitlab"
-	query string
+	cacheName       = "repos.json"
+	maxCacheAge     = 180 * time.Minute
+	repo            = "mjhuber/alfred-gitlab"
+	query           string
 
 	// aw.Workflow is the main API
 	wf *aw.Workflow
@@ -34,6 +37,7 @@ func main() {
 }
 
 func run() {
+	showUpdateStatus()
 	opts := &Options{}
 	cfg := aw.NewConfig()
 	if err := cfg.To(opts); err != nil {
@@ -41,7 +45,15 @@ func run() {
 		return
 	}
 
-	query := strings.Join(os.Args[1:], " ")
-	search(opts, query)
-	wf.SendFeedback()
+	switch os.Args[1] {
+	case "download":
+		wf.Configure(aw.TextErrors(true))
+		log.Printf("downloading repo list")
+		cacheRepos(opts)
+		return
+	case "search":
+		find(strings.Join(os.Args[2:], " "))
+	default:
+		wf.Fatalf("No steps for command %s", os.Args[1])
+	}
 }

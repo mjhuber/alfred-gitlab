@@ -58,7 +58,7 @@
 				<key>runningsubtext</key>
 				<string>Searching....</string>
 				<key>script</key>
-				<string>./alfred-gitlab "{query}"</string>
+				<string>./alfred-gitlab search "{query}"</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
 				<key>scriptfile</key>
@@ -121,9 +121,9 @@
 	<key>variables</key>
 	<dict>
 		<key>GITLAB_TOKEN</key>
-		<string></string>
+		<string>qXndZiucUJ6_c_WpHJgy</string>
 		<key>GITLAB_URL</key>
-		<string></string>
+		<string>https://gitlab.rechargeapps.net</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array>
