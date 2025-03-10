@@ -10,7 +10,7 @@ an alfred workflow to search gitlab projects
 * `GITLAB_URL` (ex: `https://gitlab.<your-domain>.com`)
 * `GITLAB_TOKEN`: Your gitlab access token.  You can generate an access token in your Gitlab Profile.
 
-3. Search for gitlab with `gitlab <search>`
+3. Search for gitlab with `gl <search>`.  The first run may take some time as it caches a list of all the available projects.
 
 ## FAQ
 
